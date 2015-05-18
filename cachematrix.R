@@ -3,6 +3,7 @@
 
 ## Write a short comment describing this function
 ### Uses cachemean, but replaces all references to mean with a and solve
+### This function moves the matrix to the cache
 
 makeCacheMatrix <- function(x = matrix()) {
         a <- NULL
@@ -22,6 +23,8 @@ makeCacheMatrix <- function(x = matrix()) {
 
 ## Write a short comment describing this function
 ### Uses makeVector, but replaces all references to mean with a and solve
+### This function determines if the matrix inverse already exists in the cache
+### If it exists, it returns its value, if not it computes its inverse
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
         a <- x$getsolve()
